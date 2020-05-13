@@ -2,9 +2,6 @@
     "version": 2,
     "name": "now-laravel",
     "scope": "your scope",
-    "regions": [
-      "all"
-    ],
     "public": true,
     "builds": [
       {
