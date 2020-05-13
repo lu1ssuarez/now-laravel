@@ -1,10 +1,26 @@
 {
-    "functions": {
-      "api/index.php": {
-        "runtime": "now-php@0.0.10"
-      }
-    },
+    "version": 2,
+    "name": "now-laravel-core",
+    "scope": "your scope",
+    "regions": [
+      "all"
+    ],
+    "public": true,
+    "builds": [
+      {
+        "src": "public/index.php",
+        "use": "now-php@latest",
+        "config": {
+          "mode": "cgi",
+          "composer": true
+        }
+      },
+      { "src": "public/!(*.php)", "use": "@now/static" },
+      { "src": "public/**/!(*.php)", "use": "@now/static" }
+    ],
     "routes": [
-      { "src": "/(.*)",  "dest": "/api/index.php" }
+      { "src": "/favicon.ico", "dest": "public/favicon.ico"},
+      { "src": "/robots.txt", "dest": "public/robots.txt"},
+      { "src": "/(.*)", "dest": "public/index.php" } 
     ]
   }
