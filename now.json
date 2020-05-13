@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "now-laravel-core",
+    "name": "now-laravel",
     "scope": "your scope",
     "regions": [
       "all"
