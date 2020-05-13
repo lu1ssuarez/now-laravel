@@ -52,4 +52,7 @@ $app->singleton(
 |
 */
 
+$path_storage = "/tmp";
+$app->useStoragePath($path_storage);
+
 return $app;
